@@ -17,8 +17,9 @@ public class DayStadisticsService {
     private DayStadisticsRepository dayStadisticsRepository;
 
     public DayStadistics getStats(final Integer day) {
-	// if (day == null) {
-	// }
+	 if (day == null) {
+	     return new DayStadistics();
+	 }
 	LOGGER.info("retriving day " + day);
 	return dayStadisticsRepository.findByDay(day);
     }
