@@ -105,7 +105,7 @@ public class SolarSystem implements WeatherCalculator {
     @Override
     public Boolean optimalDay(final Integer day, final Point a, final Point b, final Point c) {
 	if (pointsAling(a, b, c)) {
-	    return !pointsAling(new Point(1, 1), b, c);
+	    return !pointsAling(new Point(), b, c);
 	}
 	return false;
     }
